@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Worker</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <div class="container">
+        <form >
+        <div class="calc-form">
+            <h3>Calculate your Rewards</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Vendor/Bills</td>
+                        <td><input id="vendor-input" onblur="inbutSubmit()" name="card-input" type="number" placeholder="Enter a number" ></td>
+                    </tr>
+                    <tr>
+                        <td>Media/Ad Spend</td>
+                        <td><input id="media-input" onblur="inbutSubmit()" name="card-input" type="number" placeholder="Enter a number" ></td>
+                    </tr>
+                    <tr>
+                        <td>Corporation spend</td>
+                        <td><input id="corp-input" onblur="inbutSubmit()" name="card-input" type="number" placeholder="Enter a number" ></td>
+                    </tr>
+                    <tr>
+                        <td>Team project</td>
+                        <td><input id="team-input" onblur="inbutSubmit()" name="card-input" type="number" placeholder="Enter a number" ></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="reward-count">
+            <h4>Compare your Rewards</h4>
+            <div class="compare-slider">    
+                <!-- <button class="w3-button w3-display-left" type="button" onclick="plusDivs(-1)">&#10094;</button> -->
+                <button class="mySlides" id="brex-btn" type="button" onclick="brexSubmit(this)">Brex</button>
+                <button class="mySlides" id="str-btn" type="button" onclick="strSubmit(this)">Stripe</button>
+                <button class="mySlides" id="amx-btn" type="button" onclick="amxSubmit(this)">AMEX</button>
+                <!-- <button class="w3-button w3-display-right" type="button" onclick="plusDivs(+1)">&#10095;</button> -->
+            </div>
+            <div class="info-details">
+                <img src="miles-green.png" alt=""  srcset="">
+
+                <table>
+                    <tbody id="card-row">
+                        <tr >
+                            
+                        </tr>
+                        <tr>
+                            <td class="unlimited-row">
+                                <label for="unlimited">Unlimited rewards </label>
+                            </td>
+                            <td>
+                                <progress id="unlimited" value="100" max="100"> </progress>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="life-row">
+                                <label for="lifetime">Lifetime rewards</label>
+                            </td>
+                            <td>
+                                <progress id="lifetime" value="100" max="100"> </progress>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+               
+            </div>
+        </div>
+    </form>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
